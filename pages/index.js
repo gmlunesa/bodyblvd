@@ -1,10 +1,15 @@
+import React, { useState, useContext } from "react";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Form from "../components/Form";
 import Title from "../components/Title";
 import Evaluation from "../components/Evaluation";
 
+import { CalcContext } from "../context/CalcContext";
+
 export default function Home() {
+  const [showEvaluation, setShowEvaluation] = useState(false);
+  const { currentBmi, currentLevel } = useContext(CalcContext);
   return (
     <>
       <Head>
@@ -15,7 +20,7 @@ export default function Home() {
       </Head>
       <Title />
       <Form />
-      <Evaluation />
+      {currentBmi > 0 && <Evaluation />}
     </>
   );
 }

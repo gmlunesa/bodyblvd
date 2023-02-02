@@ -1,5 +1,7 @@
 import { Inter } from "@next/font/google";
+import { CalcContextProvider } from "../context/CalcContext";
 import Layout from "../components/Layout";
+
 import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,9 +16,11 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <CalcContextProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CalcContextProvider>
     </>
   );
 }
