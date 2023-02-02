@@ -6,7 +6,7 @@ import { Information } from "../helpers/information";
 const Evaluation = () => {
   const { currentBmi, currentLevel } = useContext(CalcContext);
   return (
-    <div className="w-full max-w-sm p-6 my-2 text-white bg-purple-900/20 rounded-lg shadow">
+    <div className="w-full max-w-xs md:max-w-sm p-6 my-2 text-white bg-purple-900/20 rounded-lg shadow">
       <span class="bg-rose-100 text-rose-800 text-sm font-medium mr-2 px-2.5 py-1.5 rounded">
         {currentBmi.toFixed(2)}
       </span>

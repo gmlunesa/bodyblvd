@@ -14,7 +14,7 @@ const Form = () => {
     setCurrentLevel(result.bmiLevel);
   };
   return (
-    <div className="w-full max-w-sm p-6 my-2 bg-rose-800/20 text-rose-50 rounded-lg shadow">
+    <div className="w-full max-w-xs md:max-w-sm  p-6 my-2 bg-rose-800/20 text-rose-50 rounded-lg shadow">
       <form className="space-y-6" onSubmit={handleOnSubmit}>
         <div>
           <label
